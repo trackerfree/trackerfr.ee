@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tracker free</title>
+
+  <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 10vh 0 0 10vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  transition: 100ms linear all;
+  display: inline-block;
+  margin-bottom: 2.5em;
+}
+
+h1 {
+  font-size: 4.7vh;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  line-height: 1.45;
+  margin-bottom: 2.5rem;
+  margin-bottom: 10vh;
+  max-width: 54em;
+}
+
+  @media screen and (min-width: 48em) {
+    ul {
+      -webkit-column-count: 2;
+              column-count: 2;
+    }
+  }
+
+li a {
+  font-size: 3vh;
+  text-decoration: none;
+}
+
+footer {
+  display: block;
+  padding: 1em 0;
+}
+  </style>
+</head>
+<body>
+<h1>Tracker Free</h1>
+  
+<ul>
+  <li><a href="http://a2-type.co.uk">A2-TYPE</a></li>
+  <li><a href="https://bold-decisions.biz">Bold Decisions</a></li>
+  <li><a href="https://commercialtype.com">Commercial Type</a></li>
+  <li><a href="http://abcdinamo.com">Dinamo Typefoundry</a></li>
+  <li><a href="https://ecal-typefaces.ch">ECAL Typefaces</a></li>
+  <li><a href="https://www.fatype.com">Fatype</a></li>
+  <li><a href="https://frerejones.com">Frere-Jones Type</a></li>
+  <li><a href="https://grillitype.com">Grilli Type</a></li>
+  <li><a href="https://klim.co.nz">Klim Type Foundry</a></li>
+  <li><a href="http://lineto.com">Lineto</a></li>
+  <li><a href="http://lucasfonts.com">LucasFonts</a> </li>
+  <li><a href="https://www.ludwigtype.de">Ludwig Type</a> </li>
+  <li><a href="http://milieugrotesque.com">Milieu Grotesque</a></li>
+  <li><a href="http://optimo.ch">Optimo</a></li>
+  <li><a href="https://ourtype.com">OurType</a></li>
+  <li><a href="https://processtypefoundry.com">Process Type Foundry</a></li>
+  <li><a href="https://productiontype.com">Production Type</a></li>
+  <li><a href="https://www.typemanufactur.com">TypeManufactur</a> </li>
+  <li><a href="http://www.underware.nl">Underware</a> </li>
+  <li><a href="http://vllg.com">Village</a></li>
+</ul>
+  <footer>
+    <small>Inspired by <a href="//blog.sambaldwin.info/2016/01/24/tracker-free-type-on-the-web.html">this post</a> about untracked font files from <a href="//twitter.com/baldwinsam">@baldwinsam</a>. Missing your favourite foundry? <a href="//github.com/trackerfree/trackerfr.ee">Pull requests</a> or <a href="twitter.com/">tweets</a> welcome.</small>
+  </footer>
+
+  <script>
+var els = document.querySelectorAll('h1');
+var letterSpacing = 0;
+var timer = 2400;
+
+setInterval(function() {
+  letterSpacing += .1;
+     
+  for (var i = 0; i < els.length; i++ ) {
+    var el = els[i];
+
+    el.style.transitionDuration = timer + 'ms';
+    if (el.offsetWidth < window.innerWidth * .5 ) {
+      el.style.letterSpacing = letterSpacing + 'em';
+    }
+  }  
+
+}, timer );
+  </script>
+</body>
+</html>
