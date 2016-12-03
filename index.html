@@ -161,13 +161,13 @@ a {
   <p>Inspired by <a href="http://blog.sambaldwin.info/2016/01/24/tracker-free-type-on-the-web.html">this post</a> about untracked font files from <a href="//twitter.com/baldwinsam">@baldwinsam</a>.</p>
 </footer>
 
-  <script>
+<script>
 var els = document.querySelectorAll('h1');
 var letterSpacing = 0;
 var timer = 2400;
 
-setInterval(function() {
-  letterSpacing += .01;
+function trackText() {
+  letterSpacing += .001;
 
   for (var i = 0; i < els.length; i++ ) {
     var el = els[i];
@@ -178,7 +178,10 @@ setInterval(function() {
     }
   }
 
-}, 1000 / 24 );
-  </script>
+  requestAnimationFrame(trackText);
+};
+
+trackText();
+</script>
 </body>
 </html>
